@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+	.page-list {
+		background: #726c58;
+	}
+
+	.page-list__container {
+		min-height: calc(100vh - 116px);
+		padding: 220px 0px 0;
+	}
+
+	@media (max-width: 767.98px) {
+		.page-list__container {
+			padding: 150px 0px 0;
+		}
+	}
+
+	.page-list__container h2 {
+		margin: 0 0 25px;
+		font-size: 28px;
+		line-height: 1.25;
+		font-weight: 600;
+		color: #fff;
+	}
+
+	.page-list__container li {
+		margin: 0px 0px 17px 0px;
+	}
+
+	.page-list__container a {
+		font-size: 20px;
+		line-height: 1.25;
+		font-weight: 400;
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.page-list__container a:hover {
+		text-decoration: none;
+	}
+</style>
+
+<body>
+	<div class="wrapper">
+		<header class="header _lp">
+			<div class="header__content _container _container--big">
+				<div class="header__menu menu">
+					<a class="menu__logo" href="index.html">
+						<img src="img/logo/logo.png" alt="Логотип">
+					</a>
+					<nav class="menu__body">
+						<button type="submit" class="menu__btn btn btn--main">Меню</button>
+						<ul class="menu__list _hidden-768">
+							<li><a href="pro-nas.html" class="menu__link">Про нас</a></li>
+							<li><a href="planuvannja.html" class="menu__link">Планування</a></li>
+							<li><a href="hid-budivnytstva.html" class="menu__link">Хід будівництва</a></li>
+							<li><a href="galereja.html" class="menu__link">Галерея</a></li>
+							<li><a href="kontakty.html" class="menu__link">Контакти</a></li>
+							<li><a href="dokumenty.html" class="menu__link">Документи</a></li>
+							<li><a href="umovy.html" class="menu__link">Умови</a></li>
+						</ul>
+					</nav>
+					<div class="languages _hidden-768" data-da=".menu__list,767,last">
+						<a class="languages__item" href="ru/index.html">ru</a>
+						<span class="languages__item _active">ua</span>
+					</div>
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+
+			<section class="page-list">
+				<div class="page-list__container _container">
+					<h2>Список страниц проекта</h2>
+					<ul>
+						<li><a href="index.html" target="_blank">Главная</a></li>
+						<li><a href="pro-nas.html" target="_blank">О нас</a></li>
+						<li><a href="planuvannja.html" target="_blank">Планирование</a></li>
+						<li><a href="hid-budivnytstva.html" target="_blank">Ход строительства</a></li>
+						<li><a href="galereja.html" target="_blank">Галерея</a></li>
+						<li><a href="kontakty.html" target="_blank">Контакты</a></li>
+						<li><a href="dokumenty.html" target="_blank">Документы</a></li>
+						<li><a href="umovy.html" target="_blank">Условия</a></li>
+					</ul>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__copy" data-aos="fade-up" data-aos-anchor-placement=" top-bottom" data-aos-delay="0">
+				royallife.com.ua © 2021. Усі права захищено</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+	<script src="js/vendors.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
