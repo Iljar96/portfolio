@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Все товары"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<!-- Intro-bgr -->
+			<section class="intro-img">
+				<div class="intro-img__wrapper _container">
+					<h2 class="intro-img__title title">Кофе</h2>
+
+					<div class="intro-img__img">
+						<img src="img/intro/intro-img.jpg" alt="Кофе">
+					</div>
+					<div class="intro-img__text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio efficitur, venenatis lectus
+						at, volutpat magna. In porttitor nibh sed odio viverra porta. Aliquam sed lectus eget orci ultrices gravida.
+						Fusce sed risus vel enim facilisis feugiat.
+					</div>
+				</div>
+			</section>
+			<!-- Intro-bgr end -->
+
+
+			<!-- Products -->
+			<section class="products">
+				<div class="products__wrapper _container  _container--small">
+					<!-- Head -->
+					<div class="products__head head-products">
+						<div class="head-products__col filter-items-parent">
+							<h4 class="products__filter-title _desc">Фильтрация</h4>
+							<h4 class="products__filter-title _mobile">Фильтрация</h4>
+							<!-- <div class="products__filter-item filter-item">
+								<span class="filter-item__text">Молотый</span>
+								<span class="filter-item__close close"></span>
+							</div>
+							<div class="products__filter-item filter-item">
+								<span class="filter-item__text">Молотый</span>
+								<span class="filter-item__close close"></span>
+							</div> -->
+						</div>
+						<div class="head-products__col">
+							<div class="head-products__search">
+								<form>
+									<input type="text">
+									<button type="submit"></button>
+								</form>
+							</div>
+							<div class="head-products__sort sort">
+								<h4 class="sort__title">
+									<span>Сортировка</span>
+									<span class="sort__arrow"></span>
+								</h4>
+								<div class="sort__dropdown">
+									<div class="options">
+										<label class="options__item">
+											<input class="options__input" checked type="radio" value="1" name="form[option]">
+											<span class="options__text"><span>сначала новые</span></span>
+										</label>
+										<label class="options__item">
+											<input class="options__input" type="radio" value="2" name="form[option]">
+											<span class="options__text"><span>сначала старые</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Head end -->
+
+					<div class="products__body">
+						<div class="filter__overlay"></div>
+						<!-- Filter -->
+						<aside class="products__filter filter">
+
+							<div class="filter__body">
+								<h4 class="filter__title-mob">Фильтрация</h4>
+								<h4 class="filter__close-mob">Закрыть фильтр</h4>
+								<div class="filter__spollers-block">
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Текст про обжарку
+											</div>
+											<div class="spollers-block__title _spoller">
+												Категория
+											</div>
+											<div class="spollers-block__body">
+												<div class="spollers-options-category _spollers">
+													<div class="spollers-block__item">
+														<div class="options-category-title _spoller">Выбрать</div>
+														<div class="spollers-block__body">
+															<div class="options-category">
+																<div class="options options--category">
+																	<label class="options__item _label">
+																		<input class="options__input _input" type="checkbox" value="1" name="category">
+																		<span class="options__text"><span class="options__icon"><img
+																					src="img/coffee/grain.svg" alt=""></span><span
+																				class="_pseudo-input-text">Зерновой</span></span>
+																	</label>
+																	<label class="options__item _label">
+																		<input class="options__input _input" type="checkbox" value="1" name="category">
+																		<span class="options__text"><span class="options__icon"><img
+																					src="img/coffee/ground.svg" alt=""></span><span
+																				class="_pseudo-input-text">Молотый</span></span>
+																	</label>
+																	<label class="options__item _label">
+																		<input class="options__input _input" type="checkbox" value="1" name="category">
+																		<span class="options__text"><span class="options__icon"><img
+																					src="img/coffee/capsule.png" alt=""></span><span
+																				class="_pseudo-input-text">Растворимый</span></span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Текст про обжарку
+											</div>
+											<div class="spollers-block__title _spoller">Бренд</div>
+
+											<div class="spollers-block__body">
+												<div class="options options--brand">
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="1" name="brand">
+														<span class="options__text">
+															<span><img src="img/coffee/lavazza.png" alt=""></span>
+															<span class="_pseudo-input-text fake-text"></span>
+														</span>
+													</label>
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="2" name="brand">
+														<span class="options__text">
+															<span><img src="img/coffee/nescafe.png" alt=""></span>
+															<span class="_pseudo-input-text fake-text">nescafe</span>
+														</span>
+													</label>
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="3" name="brand">
+														<span class="options__text">
+															<span><img src="img/coffee/costa.png" alt=""></span>
+															<span class="_pseudo-input-text fake-text">costa</span>
+														</span>
+													</label>
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="4" name="brand">
+														<span class="options__text">
+															<span><img src="img/coffee/starbucks.png" alt=""></span>
+															<span class="_pseudo-input-text fake-text">starbucks</span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Текст про обжарку
+											</div>
+											<div class="spollers-block__title _spoller">Страна</div>
+
+											<div class="spollers-block__body">
+												<div class="options options--brand">
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="1" name="country">
+														<span class="options__text"><span
+																class="catalog__tag catalog__tag--country _pseudo-input-text">Бразилия</span></span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="2" name="country">
+														<span class="options__text"><span
+																class="catalog__tag catalog__tag--country _pseudo-input-text">Руанда</span></span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="3" name="country">
+														<span class="options__text"><span
+																class="catalog__tag catalog__tag--country _pseudo-input-text">Эфиопия</span></span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="4" name="country">
+														<span class="options__text"><span
+																class="catalog__tag catalog__tag--country _pseudo-input-text">Гондурас</span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Текст про обжарку
+											</div>
+											<div class="spollers-block__title _spoller">Обжарка</div>
+
+											<div class="spollers-block__body">
+												<div class="options options--brand">
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="1" name="roasting">
+														<span class="options__text options__text--roasting">
+															<span class="catalog__tag catalog__tag--country _pseudo-input-text">
+																<span class="roasting-img">
+																	<img src="img/coffee/roasting/01.svg" alt="">
+																</span>
+																Очень светлая</span>
+														</span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="2" name="roasting">
+														<span class="options__text options__text--roasting">
+															<span class="catalog__tag catalog__tag--country _pseudo-input-text">
+																<span class="roasting-img">
+																	<img src="img/coffee/roasting/02.svg" alt="">
+																</span>
+																Светлая</span>
+														</span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="3" name="roasting">
+														<span class="options__text options__text--roasting">
+															<span class="catalog__tag catalog__tag--country _pseudo-input-text">
+																<span class="roasting-img">
+																	<img src="img/coffee/roasting/03.svg" alt="">
+																</span>
+																Средняя</span>
+														</span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="4" name="roasting">
+														<span class="options__text options__text--roasting">
+															<span class="catalog__tag catalog__tag--country _pseudo-input-text">
+																<span class="roasting-img">
+																	<img src="img/coffee/roasting/04.svg" alt="">
+																</span>
+																Темная</span>
+														</span>
+													</label>
+													<label class="options__item options__item--country _label">
+														<input class="options__input _input" type="checkbox" value="5" name="roasting">
+														<span class="options__text options__text--roasting">
+															<span class="catalog__tag catalog__tag--country _pseudo-input-text">
+																<span class="roasting-img">
+																	<img src="img/coffee/roasting/05.svg" alt="">
+																</span>
+																Очень темная</span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Текст про обжарку
+											</div>
+											<div class="spollers-block__title _spoller">Сорт кофе</div>
+
+											<div class="spollers-block__body">
+												<div class="options">
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="1" name="sort">
+														<span class="options__text options__text--sort"><span
+																class="_pseudo-input-text">Арабика</span></span>
+													</label>
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="2" name="sort">
+														<span class="options__text options__text--sort"><span
+																class="_pseudo-input-text">Робуста</span></span>
+													</label>
+													<label class="options__item _label">
+														<input class="options__input _input" type="radio" value="3" name="sort">
+														<span class="options__text options__text--sort"><span
+																class="_pseudo-input-text">Арабика+робуста</span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+									<!-- Spoller -->
+									<div class="spollers-block__spollers _spollers">
+										<div class="spollers-block__item">
+											<div class="spollers-block__icon">
+												<img src="img/icons/question_mark.png" alt="">
+											</div>
+											<div class="spollers-block__text">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Error porro Lorem, ipsum dolor sit amet
+												consectetur adipisicing elit. Doloribus ratione accusamus sequi itaque repellat exercitationem
+												odio, commodi aspernatur repudiandae quas laborum laudantium velit quia hic eos totam nostrum?
+												Quidem, autem.
+											</div>
+											<div class="spollers-block__title _spoller">Вес</div>
+
+											<div class="spollers-block__body">
+												<div class="options">
+													<label class="checkbox _label">
+														<input class="checkbox__input _input" type="checkbox" value="1" name="weight">
+														<span class="checkbox__text"><span class="_pseudo-input-text">0,5 кг</span></span>
+													</label>
+													<label class="checkbox _label">
+														<input class="checkbox__input _input" type="checkbox" value="2" name="weight">
+														<span class="checkbox__text"><span class="_pseudo-input-text">1 кг</span></span>
+													</label>
+													<label class="checkbox _label">
+														<input class="checkbox__input _input" type="checkbox" value="3" name="weight">
+														<span class="checkbox__text"><span class="_pseudo-input-text">2 кг</span></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Spoller end -->
+								</div>
+
+							</div>
+							<button type="button" class="filter__btn btn btn--red-white">Применить</button>
+						</aside>
+						<!-- Filter end -->
+
+						<!-- Catalog -->
+						<ul class="products__catalog catalog">
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="catalog__item">
+								<div class="catalog__inner">
+									<a class="catalog__icon" href="#">
+										<img src="img/coffee/01.png" alt="HARMONY BARISTA BLEND СOFFE BARISTA BLEND СOFFEE">
+									</a>
+									<div class="catalog__content">
+										<a class="catalog__title" href="#">
+											HARMONY BARISTA BLEND СOFFEE
+										</a>
+										<div class="catalog__tags">
+											<div class="catalog__tag">Италия</div>
+											<div class="catalog__tag">Lavazza</div>
+										</div>
+										<div class="catalog__values">
+											<div class="catalog__value">110мл</div>
+											<div class="catalog__value">175мл</div>
+											<div class="catalog__value">240мл</div>
+											<div class="catalog__value">300мл</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							@@include('_pagging.html',{})
+						</ul>
+						<!-- Catalog end -->
+					</div>
+
+				</div>
+			</section>
+			<!-- Products end -->
+
+			<!-- Coffee -->
+			<section class="founder">
+				<div class="founder__wrapper _container">
+					<div class="founder__content founder__content--coffee">
+						<div class="founder__slogan founder__slogan--coffee">
+							<p>
+								Кофе TOTTI Caffé - эксклюзивная линейка кофе, основателем которой является Roberto Totti – итальянский
+								создатель элитных блендов для приготовления эспрессо. Кофе ТМ TOTTI Caffé производится в Италии (Риме),
+								начиная с момента основания в 1939 году.
+							</p>
+							<p>
+								С 2007 года права на производство кофе принадлежат компании
+								Strauss Group, которая разрабатывает новый ассортимент профессиональных блендов, основанных на старых
+								традициях производства с учетом современных технологий и вкусовых предпочтений ценителей истинного
+								итальянского эспрессо.
+							</p>
+						</div>
+					</div>
+					<div class="founder__img _ibg">
+						<img src="img/clients/review.jpg" alt="Кофе TOTTI Caffé">
+					</div>
+				</div>
+			</section>
+			<!-- Coffee end -->
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

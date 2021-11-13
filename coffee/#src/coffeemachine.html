@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Аренда кофемашин"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page page--bgr-gray">
+			<!-- Intro-bgr -->
+			<section class="intro-bgr">
+				<div class="intro-bgr__wrapper _container _container--small">
+					<h2 class="intro-bgr__title title">Поможем подобрать оптимальное решение для вас</h2>
+				</div>
+			</section>
+			<!-- Intro-bgr end -->
+
+			<!-- Calculator -->
+			<section class="calculator _container _container--small">
+				<nav class="calculator__nav">
+					<div class="calculator__navitem _active" data-ind="0"><span>Выберите тип вашего бизнеса</span></div>
+					<div class="calculator__navitem" data-ind="1"><span>Нагрузка на кофе-машину</span></div>
+					<div class="calculator__navitem" data-ind="2"><span>Бюджет на кофе</span></div>
+					<div class="calculator__navitem" data-ind="3"><span>Выбор напитков в меню</span></div>
+				</nav>
+				<div class="calculator__items">
+					<form action="">
+						<div class="calculator__block _active">
+							<h3 class="calculator__title">В зависимости от ваших целей, мы предложим наиболее оптимальный вариант</h3>
+							<div class="options">
+								<label class="options__item">
+									<input class="options__input" checked type="radio" value="1" name="type">
+									<span class="options__text">
+										<span>Для дома</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/home.svg" alt="Для дома">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="2" name="type">
+									<span class="options__text">
+										<span>Для офиса</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/office.png" alt="Для офиса">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="3" name="type">
+									<span class="options__text">
+										<span>Для бизнеса</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/business.png" alt="Для бизнеса">
+									</span>
+								</label>
+							</div>
+							<span class="btn btn--next">
+								<span>Дальше</span>
+								<img src="img/icons/arrow-submit.svg" alt="Дальше">
+							</span>
+						</div>
+						<div class="calculator__block">
+							<h3 class="calculator__title calculator__title--payment">В зависимости от ваших целей, мы предложим
+								наиболее
+								оптимальный вариант</h3>
+							<div class="payment _tabs">
+								<nav class="payment__nav">
+									<h3 class="payment__title">Рассчет:</h3>
+									<div class="payment__navitem _tabs-item payment__navitem--employees _active">Кол-во сотрудников
+									</div>
+									<div class="payment__navitem _tabs-item payment__navitem--cups">Кол-во чашек</div>
+								</nav>
+								<div class="">
+									<div class="payment__block _tabs-block _active">
+										<div class="options options--col">
+											<label class="options__item">
+												<input class="options__input" type="radio" value="1" name="burden">
+												<span class="options__text">
+													<span>до 30</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="2" name="burden">
+												<span class="options__text">
+													<span>30-60</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="3" name="burden">
+												<span class="options__text">
+													<span>60-90</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="4" name="burden">
+												<span class="options__text">
+													<span>более 100</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="payment__block _tabs-block">
+										<div class="options options--col">
+											<label class="options__item">
+												<input class="options__input" type="radio" value="5" name="burden">
+												<span class="options__text">
+													<span>до 30</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="6" name="burden">
+												<span class="options__text">
+													<span>30-60</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="7" name="burden">
+												<span class="options__text">
+													<span>60-90</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="8" name="burden">
+												<span class="options__text">
+													<span>90-120</span>
+												</span>
+											</label>
+											<label class="options__item">
+												<input class="options__input" type="radio" value="9" name="burden">
+												<span class="options__text">
+													<span>более 120</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<span class="btn btn--next">
+								<span>Дальше</span>
+								<img src="img/icons/arrow-submit.svg" alt="Дальше">
+							</span>
+						</div>
+						<div class="calculator__block">
+							<h3 class="calculator__title">В зависимости от ваших целей, мы предложим наиболее оптимальный вариант</h3>
+							<div class="options options--col">
+								<label class="options__item">
+									<input class="options__input" type="radio" value="1" name="budget">
+									<span class="options__text">
+										<span>400</span>
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="2" name="budget">
+									<span class="options__text">
+										<span>600</span>
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="3" name="budget">
+									<span class="options__text">
+										<span>800</span>
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="radio" value="4" name="budget">
+									<span class="options__text">
+										<span>более 1000</span>
+									</span>
+								</label>
+							</div>
+							<span class="btn btn--next">
+								<span>Дальше</span>
+								<img src="img/icons/arrow-submit.svg" alt="Дальше">
+							</span>
+							<a href="#" class="btn btn--skip">
+								<span>Пропустить</span>
+							</a>
+						</div>
+						<div class="calculator__block">
+							<h3 class="calculator__title calculator__title--count">В зависимости от ваших целей, мы предложим наиболее
+								оптимальный вариант</h3>
+							<div class="options options--beverages">
+								<label class="options__item">
+									<input class="options__input" checked type="checkbox" value="1" name="beverages">
+									<span class="options__text">
+										<span>эспрессо</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/01.svg" alt="Эспрессо">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="2" name="beverages">
+									<span class="options__text">
+										<span>американо</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/02.svg" alt="Американо">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" checked type="checkbox" value="3" name="beverages">
+									<span class="options__text">
+										<span>капучино</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/03.svg" alt="Капучино">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="4" name="beverages">
+									<span class="options__text">
+										<span>латте</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/04.svg" alt="Латте">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="5" name="beverages">
+									<span class="options__text">
+										<span>флэт уайт</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/05.svg" alt="Флэт уайт">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="6" name="beverages">
+									<span class="options__text">
+										<span>маккиато</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/06.svg" alt="Маккиато">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="7" name="beverages">
+									<span class="options__text">
+										<span>по-венски</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/07.svg" alt="По-венски">
+									</span>
+								</label>
+								<label class="options__item">
+									<input class="options__input" type="checkbox" value="8" name="beverages">
+									<span class="options__text">
+										<span>раф кофе</span>
+									</span>
+									<span class="options__img">
+										<img src="img/calculator/08.svg" alt="Раф кофе">
+									</span>
+								</label>
+								<button type="button" class="calc__btn btn--red-white">Подобрать</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- Calculator end -->
+
+
+			<!-- Recommendations -->
+			<section class="recommendations">
+				<div class="recommendations__wrapper _container">
+					<ul class="recommendations__items">
+						<li class="recommendations__item">
+							<div class="recommendations__img">
+								<img src="img/calculator/coffee_machine01.png" alt="Кофейный аппарат">
+							</div>
+							<div class="recommendations__content">
+								<h3 class="recommendations__title">
+									Кофемашина Saeco Lirika OTC
+								</h3>
+								<div class="recommendations__text">
+									Зерновая кофемашина последнего поколения, компактная и простая в использовании. Оснащена системой
+									вспенивания молока, функциями регулирования степени помола кофе и количества воды и молока в чашке.
+								</div>
+								<div class="recommendations__cups-amount">
+									<span class="recommendations__amount">30</span>
+									<span>/сут</span>
+								</div>
+								<div class="recommendations__beverages-amount">4 напитка в меню</div>
+								<div class="recommendations__tags catalog__tags">
+									<div class="recommendations__row">
+										<div class="recommendations__tag catalog__tag">эспрессо</div>
+										<div class="recommendations__tag catalog__tag">американо</div>
+									</div>
+									<div class="recommendations__row">
+										<div class="recommendations__tag catalog__tag">капучино</div>
+										<div class="recommendations__tag catalog__tag">латте</div>
+									</div>
+								</div>
+								<button type="button" class="form__btn btn--red-white">Оставить заявку</button>
+							</div>
+
+						</li>
+						<li class="recommendations__item">
+							<div class="recommendations__img">
+								<img src="img/calculator/coffee_machine01.png" alt="Кофейный аппарат">
+							</div>
+							<div class="recommendations__content">
+								<h3 class="recommendations__title">
+									Кофемашина Saeco Lirika OTC
+								</h3>
+								<div class="recommendations__text">
+									Зерновая кофемашина последнего поколения, компактная и простая в использовании. Оснащена системой
+									вспенивания молока, функциями регулирования степени помола кофе и количества воды и молока в чашке.
+								</div>
+								<div class="recommendations__cups-amount">
+									<span class="recommendations__amount">30</span>
+									<span>/сут</span>
+								</div>
+								<div class="recommendations__beverages-amount">4 напитка в меню</div>
+								<div class="recommendations__tags catalog__tags">
+									<div class="recommendations__row">
+										<div class="recommendations__tag catalog__tag">эспрессо</div>
+										<div class="recommendations__tag catalog__tag">американо</div>
+									</div>
+									<div class="recommendations__row">
+										<div class="recommendations__tag catalog__tag">капучино</div>
+										<div class="recommendations__tag catalog__tag">латте</div>
+									</div>
+								</div>
+								<button type="button" class="form__btn btn--red-white">Оставить заявку</button>
+							</div>
+
+						</li>
+						<!-- <li class="recommendations__item">
+							<div class="recommendations__img">
+								<img src="img/calculator/coffee_machine02.png" alt="Кофейный аппарат">
+							</div>
+							<div class="recommendations__content">
+								<h3 class="recommendations__title">
+									Кофемашина Saeco Lirika OTC
+								</h3>
+								<div class="recommendations__text">
+									Зерновая кофемашина последнего поколения, компактная и простая в использовании. Оснащена системой
+									вспенивания молока, функциями регулирования степени помола кофе и количества воды и молока в чашке.
+								</div>
+								<div class="recommendations__cups-amount">
+									<span class="recommendations__amount">30</span>
+									<span>/сут</span>
+								</div>
+								<div class="recommendations__beverages-amount">8 напитков в меню</div>
+								<ul class="recommendations__icons">
+									<li class="recommendations__icon">
+										<img src="img/coffee/espresso.png" alt="Эспрессо">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/americano.png" alt="Американо">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/cappuccino.png" alt="Капучино">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/espresso.png" alt="Латте">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/espresso.png" alt="Эспрессо">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/americano.png" alt="Американо">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/cappuccino.png" alt="Капучино">
+									</li>
+									<li class="recommendations__icon">
+										<img src="img/coffee/espresso.png" alt="Латте">
+									</li>
+								</ul>
+								<button type="button" class="form__btn btn--red-white">Оставить заявку</button>
+							</div>
+
+						</li> -->
+					</ul>
+					<button type="button" class="recommendations__btn btn btn--one-more-time">Подобрать еще раз</button>
+				</div>
+
+			</section>
+			<!-- Recommendations end -->
+
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

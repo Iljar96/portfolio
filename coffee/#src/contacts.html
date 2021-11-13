@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<!-- News-intro -->
+			<section class="partners partners--secondary">
+				<div class="partners__wrapper _container _container--small">
+					<h2 class="partners__title title">Контакты</h2>
+				</div>
+			</section>
+			<!-- News-intro end -->
+
+			<!-- form-main -->
+			<section class="form-main form-main--contacts">
+				<div class="form-main__wrapper _container _container--small">
+					<div class="form-main__content">
+						<p>г. Одеса, ул. Цветаева 3/5
+						</p>
+						<p>График работы <br> ПН-ПТ с 9:00 до 18:00</p>
+						<a class="form-main__mail" href="mailto:hotspotcoffee@gmail.com">hotspotcoffee@gmail.com</a>
+						<a href="tel:380957869563" class="form-main__tel"><span>+38</span> (095) 786-95-63</a>
+						<a href="tel:380637820527" class="form-main__tel"><span>+38</span> (063) 782-05-27</a>
+						<div class="form-main__social">
+							<p>Для быстрой связи</p>
+							<a class="form-main__social-item social--red viber" href="#" target="_blank"></a>
+							<a class="form-main__social-item social--red telegram" href="#" target="_blank"></a>
+						</div>
+						<div class="form-main__social">
+							<p>Мы в соц. сетях</p>
+							<a class="form-main__social-item social--red instagram" href="instagram.com" target="_blank"></a>
+							<a class="form-main__social-item social--red facebook" href="facebook.com" target="_blank"></a>
+						</div>
+					</div>
+
+					<form action="#">
+
+						<div class="form-main__select-wrapper">
+							<div class="form-main__placeholder">Тип вашего бизнеса</div>
+
+							<select name="main_count" class="form-main__select">
+								<option value="1" selected="selected">Новый Пункт №1</option>
+								<option value="2">Новый Пункт №2</option>
+								<option value="3">Новый Пункт №3</option>
+								<option value="4">Новый Пункт №4</option>
+							</select>
+						</div>
+						<div class="form-main__select-wrapper">
+							<div class="form-main__placeholder">Кол-во порций в день (примерно)</div>
+							<select id="sel1" name="main_type" class="form-main__select">
+								<option value="1" selected="selected">Пункт №1</option>
+								<option value="2">Пункт №2</option>
+								<option value="3">Пункт №3</option>
+								<option value="4">Пункт №4</option>
+							</select>
+						</div>
+						<input type="text" name="main_name" class="input" placeholder="Имя">
+						<input type="tel" name="main_phone" class="input" placeholder="Телефон">
+						<label class="checkbox">
+							<input class="checkbox__input" type="checkbox" value="1" name="main-confirm">
+							<span class="checkbox__text"><span>Принимаю <a href="#" target="_blank">условия использования</a>
+									персональных
+									данных</span>
+						</label>
+						<button type="submit" class="form-main__btn btn btn--red">Оставить заявку</button>
+					</form>
+				</div>
+			</section>
+			<!-- Form end -->
+
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

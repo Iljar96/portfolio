@@ -1,0 +1,415 @@
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.title {
+	max-width: 470px;
+	font-family: $Lato;
+	font-weight: 700;
+	font-size: 33px;
+	line-height: 54/45 * 100%;
+	color: var(--white);
+	@media (max-width: 1049px) {
+		font-size: 31px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 28px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 23px;
+	}
+}
+
+/*Arrow*/
+.arrow {
+	display: block;
+	width: 21px;
+	height: 48px;
+	background: url(../img/icons/arrow-next.svg) center no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	&::after {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 300vh;
+		position: absolute;
+		top: -100vh;
+		left: -60%;
+		background: rgba(250, 250, 250, 0.03);
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease 0s, visability 0.5s ease 0s;
+	}
+	&.swiper-button-disabled {
+		cursor: default;
+		opacity: 0.2;
+	}
+}
+
+/*Close*/
+.close {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	opacity: 0.3;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+	&:after,
+	&:before {
+		position: absolute;
+		content: " ";
+		height: 12px;
+		width: 2px;
+		background-color: #333;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
+
+/*Sort*/
+.sort {
+	position: relative;
+	@media (max-width: $md3+px) {
+		order: 1;
+	}
+	&__title {
+		display: inline-block;
+		padding: 2px 0px 8px;
+		font-size: 15px;
+		font-weight: 700;
+		color: var(--black);
+		cursor: pointer;
+		white-space: nowrap;
+		&._active {
+			.sort__arrow {
+				transform: rotate(180deg);
+			}
+			+ .sort__dropdown > .options {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0px, 0px);
+			}
+			+ .sort__dropdown {
+				pointer-events: all;
+			}
+		}
+		@media (max-width: $md3+px) {
+			padding: 0;
+		}
+		span {
+			&::selection {
+				background: transparent;
+			}
+		}
+	}
+
+	&__arrow {
+		display: inline-block;
+		width: 10px;
+		height: 4px;
+		margin: 0px 0px 0px 4px;
+		vertical-align: middle;
+		background: url(../img/icons/arrow_sort.svg) center no-repeat;
+		background-size: cover;
+		transition: transform 0.3s ease 0s;
+	}
+
+	&__dropdown {
+		position: absolute;
+		z-index: 3;
+		pointer-events: none;
+		@media (max-width: 1359px) {
+			right: 0;
+		}
+		@media (max-width: $md3+px) {
+			transform: translate(0px, 10px);
+			right: initial;
+		}
+	}
+	.options {
+		padding: 12px 14px 6px;
+		background: var(--gray-light);
+		box-shadow: 2px 2px 13px rgba(66, 66, 66, 0.25);
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(0px, -10px);
+		transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, transform 0.3s ease 0s;
+
+		&__text {
+			width: auto;
+			margin: 0px 0px 5px 0px;
+			font-size: 15px;
+			color: var(--black);
+			white-space: nowrap;
+			span {
+				margin: -5px 0px 0px 0px;
+			}
+			&::before {
+				flex: 0 0 15px;
+				width: 15px;
+				height: 15px;
+				border-radius: 0;
+			}
+			&::after {
+				left: 3px;
+				top: 3px;
+				border-radius: 0;
+				background: #fff url(../img/icons/check_01.svg) center no-repeat;
+				background-size: 8px 5.5px;
+			}
+		}
+	}
+}
+
+.date {
+	font-family: $Lato;
+	font-size: 16px;
+	color: #9d9d9d;
+	@media (min-width: $md2+px) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/*Social-icons*/
+.social--red {
+	display: inline-block;
+	background-color: var(--red);
+	transition: all 0.3s ease 0s;
+	mask-position: center;
+	mask-size: cover;
+	mask-repeat: no-repeat;
+	@media (min-width: $md2+px) {
+		&:hover {
+			background-color: var(--white);
+		}
+	}
+}
+.viber {
+	mask-image: url(../img/social/viber.svg);
+}
+.telegram {
+	mask-image: url(../img/social/telegram.svg);
+}
+.instagram {
+	mask-image: url(../img/social/instagram.svg);
+}
+.facebook {
+	mask-image: url(../img/social/facebook.svg);
+}
+
+.lg-autoplay-button.lg-icon {
+	position: relative;
+	background: url(../img/icons/play.svg) center no-repeat;
+	background-size: 20px 20px;
+	transition: background 0.3s ease 0s;
+
+	&::after {
+		content: "";
+	}
+}
+
+#lg-zoom-in {
+	background: url(../img/icons/zoom-plus.svg) center no-repeat;
+	background-size: 20px 20px;
+}
+
+#lg-zoom-out {
+	background: url(../img/icons/zoom-minus.svg) center no-repeat;
+	background-size: 20px 20px;
+}
+
+.lg-close.lg-icon {
+	margin: 0px 0px 0px 10px;
+}
+
+.lg-next.lg-icon,
+.lg-prev.lg-icon {
+	width: 40px !important;
+	height: 72px !important;
+	background-position: center !important;
+	background-size: 20px 36px !important;
+}
+
+.lg-autoplay-button.lg-icon,
+#lg-zoom-in,
+#lg-zoom-out,
+.lg-close.lg-icon,
+.lg-next.lg-icon,
+.lg-prev.lg-icon {
+	position: relative;
+	&::after {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(250, 250, 250, 0);
+		z-index: -1;
+	}
+	@media (min-width: $md2+px) {
+		&:hover {
+			&::after {
+				background: rgba(250, 250, 250, 0.1);
+			}
+		}
+	}
+}
+
+#lg-actual-size {
+	display: none !important;
+}
+
+.lg-icon {
+	&::after {
+		content: "" !important;
+	}
+	@media (min-width: $md2+px) {
+		&:hover {
+			&::after {
+				background: rgba(250, 250, 250, 0.1);
+			}
+		}
+	}
+}
+
+._touch {
+	.lg-toolbar {
+		opacity: 1 !important;
+	}
+	.lg-next,
+	.lg-prev {
+		display: none !important;
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<ГОТОВЫЕ КЛАССЫ>====================================================================================================
+._hidden {
+	display: none;
+}
+//====================================================================================================
+.row:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.rub:after {
+	content: "₽";
+}
+//====================================================================================================
+%noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+//====================================================================================================
+ol.counter {
+	list-style-type: none;
+	counter-reset: item;
+	li {
+		position: relative;
+		padding: 0px 0px 0px 45px;
+		&:before {
+			counter-increment: item;
+			content: counter(item);
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #818181;
+			font-size: 14px;
+			font-weight: 700;
+			text-align: center;
+			line-height: 26px;
+			border-radius: 50%;
+			width: 28px;
+			height: 28px;
+			border: 1px solid #4274bb;
+		}
+	}
+}
+//====================================================================================================
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+body.ie {
+	._ibg {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	._ibg img {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+//====================================================================================================
+._swiper {
+	overflow: hidden;
+	//.swiper-wrapper
+	.swiper-wrapper {
+		width: 100%;
+		height: 100%;
+		box-sizing: content-box;
+		display: flex;
+		position: relative;
+	}
+	&.swiper-container-vertical {
+		.swiper-wrapper {
+			flex-direction: column;
+		}
+	}
+	&.swiper-container-autoheight {
+		.swiper-wrapper {
+			align-items: flex-start;
+		}
+	}
+}
+.swiper-container-initialized {
+	.swiper-slide {
+		flex-shrink: 0;
+		// transition-property: transform;
+	}
+}
+.swiper-container-android {
+	.swiper-slide,
+	.swiper-wrapper {
+		transform: translate3d(0px, 0, 0);
+	}
+}
+.swiper-button-lock {
+	display: none !important;
+}
+//====================================================================================================
+.tab__item {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+//=====================================================================================================================
+._tabs-block {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+//=====================================================================================================================

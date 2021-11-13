@@ -1,0 +1,51 @@
+.pagging {
+	width: 100%;
+	margin: 40px 0px 20px 0px;
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+		}
+	}
+	// .pagging__arrow
+	&__arrow {
+		display: inline-block;
+		width: 7px;
+		height: 16px;
+		padding: 0px 7px;
+		&.prev {
+			margin: 3px 9px 0px 0px;
+			background: url(../img/icons/arrow_pagging.svg) center no-repeat;
+			transform: rotate(180deg);
+		}
+		&.next {
+			margin: 3px 0px 0px 9px;
+			background: url(../img/icons/arrow_pagging.svg) center no-repeat;
+		}
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		li {
+			a {
+				margin: 0px 8.5px;
+				padding: 0px 3px;
+				font-size: 16px;
+				color: var(--black);
+				line-height: 21.5/18 * 100%;
+				@media (min-width: $md2+px) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	// .pagging__item
+	&__item {
+		&._active {
+		}
+	}
+}
