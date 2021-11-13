@@ -1,0 +1,85 @@
+/* */
+.page--documentation .intro-header.intro-header--gallery {
+	margin-bottom: 92px;
+}
+/* Docs */
+.docs {
+	&__wrapper {
+		margin-bottom: 156px;
+		@media (max-width: $md1+px) {
+			margin-bottom: 100px;
+		}
+		@media (max-width: $md4+px) {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__text {
+		margin: 0 6px 120px 0px;
+		font-size: 18px;
+		line-height: 30 / 18 * 100%;
+		text-align: center;
+		@media (max-width: 1900px) {
+			margin: 0px 0px 120px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 80px 0px;
+			font-size: 17px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 60px 0px;
+			font-size: 16px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -35px;
+		@media (max-width: $md1+px) {
+			margin: 0px -15px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	&__item {
+		flex: 0 1 50%;
+		padding: 0px 35px 70px;
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			width: 28px;
+			height: 28px;
+			z-index: 1;
+			background: url(../img/icons/search-black.svg) center no-repeat;
+			background-size: cover;
+			position: absolute;
+			bottom: 96px;
+			right: 60px;
+			pointer-events: none;
+			@media (max-width: $md1+px) {
+				bottom: 56px;
+				right: 40px;
+			}
+			@media (max-width: $md3+px) {
+				bottom: 54px;
+				right: 25px;
+			}
+		}
+		@media (max-width: $md1+px) {
+			padding: 0px 15px 30px;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+			padding: 0 0 30px;
+		}
+		img {
+			width: 100%;
+			max-width: 724px;
+			border: 1px solid #939393;
+		}
+	}
+}

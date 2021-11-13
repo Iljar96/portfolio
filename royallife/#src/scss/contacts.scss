@@ -1,0 +1,226 @@
+/* Intro-header */
+.page--contacts .intro-header {
+	margin-bottom: 150px;
+	@media (max-width: $md3+px) {
+		margin-bottom: 100px;
+	}
+	@media (max-width: $md4+px) {
+		margin-bottom: 0px;
+	}
+}
+
+/* Maps */
+.maps {
+	margin: -435px 0px 142px 0px;
+	position: relative;
+	z-index: 5;
+	@media (max-width: $md1+px) {
+		margin: -340px 0 142px 0;
+	}
+	@media (max-width: $md2+px) {
+		margin: -235px 0px 142px 0px;
+	}
+	@media (max-width: $md3+px) {
+		margin: -235px 0px 50px 0px;
+	}
+	@media (max-width: $md4+px) {
+		margin: 0px 0px 30px 0px;
+	}
+	&__wrapper {
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $md1+px) {
+			justify-content: space-evenly;
+		}
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+			margin: 0px 0px 100px 0px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 80px 0px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 0 1 46.9%;
+		height: auto;
+		position: relative;
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+		background: #fff;
+		@media (max-width: $md2+px) {
+			max-width: 520px;
+			margin: 0px auto;
+			width: 100%;
+		}
+		&:first-child {
+			@media (max-width: $md2+px) {
+				margin: 0px auto 100px;
+			}
+			@media (max-width: $md4+px) {
+				margin: 0px auto 70px;
+			}
+		}
+	}
+
+	&__item--first {
+		.footer__info {
+			@media (max-width: $md1+px) {
+				max-width: 310px;
+			}
+		}
+		.footer__title {
+			@media (max-width: $md1+px) {
+				text-align: center;
+			}
+		}
+		.footer__link {
+			margin: 0 0 0 56px;
+			@media (max-width: $md1+px) {
+				margin-left: 50px !important;
+			}
+			@media (max-width: $md4+px) {
+				margin-left: 0 !important;
+			}
+		}
+		.footer__phone {
+			margin: 42px 0 15px 56px !important;
+			img {
+				width: 24px;
+				height: 27px !important;
+			}
+		}
+		.footer__email {
+			margin: 0 0 16px 56px;
+			img {
+				width: 28px;
+				height: auto;
+				margin-top: 1px;
+			}
+		}
+		.footer__address img {
+			width: 27px;
+			height: 27px;
+			align-self: flex-start;
+			vertical-align: top;
+			margin-top: 7px !important;
+		}
+	}
+
+	&__map {
+		max-width: 520px;
+		width: 100%;
+		height: 435px;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0px auto;
+		}
+	}
+
+	.footer__info {
+		padding: 85px 70px 83px;
+		width: 100%;
+		max-width: 520px;
+		height: auto;
+		margin: 0px 0px 0px 0px;
+		background: #fff;
+		@media (max-width: $md1+px) {
+			padding: 85px 0px 83px;
+			max-width: 366px;
+			margin: 0px auto;
+		}
+		@media (max-width: $md4+px) {
+			max-width: 247px;
+			padding: 50px 0px;
+		}
+	}
+
+	.footer__title {
+		font-size: 30px;
+		text-align: center;
+		margin: 0 0 39px 0;
+		@media (max-width: $md2+px) {
+			font-size: 27px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+		}
+	}
+
+	.footer__phone {
+		margin: 0 0 17px 23px;
+		font-size: 20px;
+		line-height: 1.5;
+		@media (max-width: $md4+px) {
+			font-size: 18px;
+		}
+	}
+
+	.footer__link {
+		font-size: 20px;
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
+	}
+
+	.footer__email {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	.footer__address {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	.footer__title--bottom {
+		margin: 0 0 39px 8px;
+	}
+
+	.footer__address--bottom {
+		margin: 0 0 23px 62px;
+		@media (max-width: $md4+px) {
+			margin: 0 0 23px 34px;
+		}
+		img {
+			align-self: start;
+			width: 28px;
+			height: 36px;
+		}
+	}
+
+	.footer__text {
+		font-size: 18px;
+		line-height: 30/18 * 100%;
+		@media (max-width: $md1+px) {
+			text-align: center;
+			margin-left: 0 !important;
+		}
+	}
+	.footer__btn-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	.footer__btn {
+		width: 186px;
+		height: 48px;
+		margin: 32px 0 0 9px;
+		font-weight: 300;
+		font-size: 18px;
+		background: #907e41;
+	}
+}
+.maps .footer__info .footer__link img {
+	width: 27px !important;
+}
+.maps .footer__info .footer__link.footer__email img {
+	height: 27px !important;
+}

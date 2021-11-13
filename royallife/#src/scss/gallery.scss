@@ -1,0 +1,125 @@
+/* Intro-header */
+.intro-header--gallery {
+	margin-bottom: 159px;
+	@media (max-width: $md3+px) {
+		margin-bottom: 100px;
+	}
+	@media (max-width: $md4+px) {
+		margin-bottom: 80px;
+	}
+	.intro-header__wrapper {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.intro-header__title {
+		margin: 83px 0 139px -15px;
+		text-align: center;
+		@media (max-width: 1900px) {
+			margin: 83px 0 139px;
+		}
+	}
+}
+
+.complex--building .complex__slide--scheme {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0;
+	height: auto;
+	@media (max-width: 1510px) {
+		padding: 0;
+		height: auto;
+	}
+	@media (max-width: $md2+px) {
+		padding: 0;
+	}
+	@media (max-width: $md3+px) {
+		padding: 0;
+	}
+	@media (max-width: 549px) {
+		padding: 0;
+		height: 100%;
+	}
+}
+.complex--building .complex__slide--scheme img {
+	max-width: 320px;
+	width: auto;
+	height: auto;
+	margin: 40px 0px 0px 0px;
+	@media (max-width: 1900px) {
+		display: block;
+		margin: 40px auto;
+	}
+	@media (max-width: 1510px) {
+		position: static;
+		top: initial;
+		left: initial;
+		height: auto;
+		width: auto;
+	}
+}
+.complex--building .complex__slide--scheme .scheme {
+	width: 100%;
+	max-width: 342px;
+	&._1 {
+		@media (max-width: $md2+px) {
+			max-width: 290px;
+		}
+	}
+}
+.complex--building .complex__slide--scheme .model {
+	&._1 {
+		margin: 10px 0px 0px 0px;
+		@media (max-width: 1900px) {
+			margin: 10px auto 0px;
+		}
+	}
+	&._2 {
+		margin: 0px 0 0 52px;
+		@media (max-width: 1900px) {
+			margin: 0px auto;
+		}
+	}
+}
+.complex__title.complex__title--scheme {
+	margin: 0px 0px 34px 0px;
+}
+
+.complex--building.complex--gallery .complex__item--prev,
+.complex--building.complex--gallery .complex__item--next {
+	top: 364px;
+	bottom: initial;
+	@media (max-width: 1900px) {
+		top: 107%;
+	}
+}
+.complex--building.complex--gallery .complex__wrapper {
+	margin: 0 auto 175px;
+}
+
+.gallery-text {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 53px 0px 0px 0px;
+	text-align: center;
+	font-size: 34px;
+	&--scheme {
+		margin: 53px 0px 0px 40px;
+		@media (max-width: 1900px) {
+			margin: 53px 0px 0px 0px;
+		}
+	}
+	@media (max-width: 1440px) {
+		margin: 10px 0px 0px 0px;
+		font-size: 30px;
+	}
+	@media (max-width: $md2+px) {
+		font-size: 24px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 20px;
+	}
+}

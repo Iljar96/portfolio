@@ -1,0 +1,422 @@
+/* Intro-header */
+.intro-header {
+	width: 100%;
+	height: 100vh;
+	max-height: 977px;
+	min-height: 750px;
+	@media (max-width: $md1+px) {
+		height: auto;
+	}
+	@media (max-width: $md2+px) {
+		min-height: 550px;
+	}
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 304px 0px 0px;
+		z-index: 1;
+		@media (max-width: 1830px) {
+			margin: 0px 0px 0px 150px;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 0px 100px;
+			padding: 204px 0 0;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 0px 70px;
+			padding: 170px 0 0;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 0px 50px;
+		}
+	}
+
+	&__suptitle {
+		margin: 0 0 51px -5px;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 51px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 139px -12px;
+		@media (max-width: $md2+px) {
+			margin: 0 0 40px 0px;
+		}
+	}
+
+	&__subtitle {
+		margin: 0 0 30px -7px;
+		font-weight: 300;
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+}
+
+/* Model3d */
+.model3d {
+	width: 100%;
+
+	&__wrapper {
+		padding-top: 145px;
+		padding-bottom: 5.2%;
+		@media (max-width: $md3+px) {
+			padding-top: 100px;
+			// padding-bottom: 70px;
+		}
+	}
+
+	&__text {
+		margin: 0 0 62px 3px;
+		font-size: 20px;
+		text-align: center;
+		font-weight: 300;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 58px -5px;
+		font-size: 60px;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $md2+px) {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		flex: 0 1 564px;
+		height: 311px;
+		margin: 0px 0px 40px 0px;
+		overflow: hidden;
+		@media (max-width: 1800px) {
+			margin: 0px 10px 40px;
+			height: 0;
+			position: relative;
+			padding: 0 0 17.8% 0;
+		}
+		@media (max-width: $md2+px) {
+			flex: 0 1 45%;
+			padding: 0 0 24.6% 0;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 564px;
+			margin: 0px 0px 40px 0px;
+			padding: 0 0 45% 0;
+		}
+		@media (min-width: $md2+px) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: 311px;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: transform 1.5s ease 0s;
+			@media (max-width: 1830px) {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 28px;
+			height: 28px;
+			z-index: 1;
+			background: url(../img/icons/search.svg) center no-repeat;
+			background-size: cover;
+			position: absolute;
+			bottom: 25px;
+			right: 24px;
+			pointer-events: none;
+		}
+	}
+}
+
+/* Floors */
+.floors {
+	width: 100%;
+
+	&__wrapper {
+		width: 100%;
+		margin-bottom: 226px;
+		@media (max-width: $md1+px) {
+			margin-bottom: 90px;
+		}
+		@media (max-width: $md3+px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__row {
+		width: 100%;
+		margin: 0 0 58px;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 80px 0px;
+		}
+		&--second {
+			.floors__title {
+				margin: 0px 0px 20px 0px;
+			}
+			.floors__item--scheme {
+				margin: 66px 0 0 27px;
+				padding: 0 0 0px 53px !important;
+				@media (max-width: $md3+px) {
+					margin: 20px 0 0 27px;
+				}
+				.floors__img {
+					padding: 0 0px 140px 0;
+					background: url(../img/icons/search-black.svg) no-repeat bottom right 128px;
+					background-size: 28px;
+					@media (max-width: $md1+px) {
+						padding: 0 0 80px 0;
+						background: url(../img/icons/search-black.svg) no-repeat bottom right 58px;
+						background-size: 28px;
+					}
+					@media (max-width: $md3+px) {
+						padding: 0 0 40px 0;
+					}
+					> img {
+						@media (max-width: $md1+px) {
+							width: 340px !important;
+						}
+					}
+				}
+				@media (max-width: 1830px) {
+					padding: 0px 0px 42px 0px !important;
+				}
+				// .floors__lens {
+				// 	bottom: -102px;
+				// 	right: 128px;
+				// 	@media (max-width: 1830px) {
+				// 		bottom: -50px;
+				// 	}
+				// 	@media (max-width: $md1+px) {
+				// 		right: 30px;
+				// 		bottom: -30px;
+				// 	}
+				// }
+			}
+			.floors__item--3d {
+				margin: 73px 0 0 73px;
+				.floors__img {
+					padding: 0 93px 97px 0;
+					@media (max-width: $md1+px) {
+						padding: 0 30px 60px 0;
+					}
+				}
+				@media (max-width: 1830px) {
+					margin: 73px 0px 0px 0px;
+				}
+			}
+			.floors__item--list {
+				padding: 228px 0 0 165px;
+				@media (max-width: 1830px) {
+					padding: 228px 30px 0px 0px;
+				}
+				@media (max-width: $md2+px) {
+					padding: 228px 0px 0px 0px;
+				}
+				@media (max-width: $md3+px) {
+					padding: 30px 0 20px;
+				}
+			}
+			.floors__list {
+				@media (max-width: $md3+px) {
+					margin: 0 0 30px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 60px;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			margin: 0 0 23px;
+		}
+	}
+
+	&__items {
+		width: 100%;
+		display: flex;
+		@media (max-width: 1830px) {
+			justify-content: space-between;
+		}
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
+
+	&__item {
+		position: relative;
+		height: 100%;
+		@media (max-width: $md3+px) {
+			margin-bottom: 20px !important;
+			margin-right: 30px !important;
+			margin-left: 30px !important;
+			padding: 0 !important;
+		}
+		&--scheme {
+			padding: 28px 23px 30px 0;
+			margin: 0px 0px 0px 35px;
+			@media (max-width: 1830px) {
+				padding: 28px 0px 30px 0px;
+				margin: 0px 0px 0px 0px;
+			}
+			@media (max-width: $md3+px) {
+				order: 2;
+			}
+			.floors__img {
+				padding: 0px 21px 32px 0;
+				img {
+					@media (max-width: $md4+px) {
+						width: 100%;
+						max-width: 300px;
+					}
+				}
+			}
+			// .floors__lens {
+			// 	bottom: -3px;
+			// 	right: -2px;
+			// 	@media (max-width: 1830px) {
+			// 		bottom: -26px;
+			// 		right: -42px;
+			// 	}
+			// }
+		}
+		&--3d {
+			margin: 70px 0 0 178px;
+			padding: 0 99px 97px 0;
+			@media (max-width: 1830px) {
+				margin: 70px 0px 0px 0px;
+				padding: 0px 0px 97px 0px;
+			}
+			@media (max-width: $md3+px) {
+				order: 3;
+			}
+			.floors__img {
+				padding: 0 98px 97px 0;
+				@media (max-width: $md1+px) {
+					@media (max-width: $md1+px) {
+						padding: 0 30px 60px 0;
+					}
+				}
+			}
+			// .floors__lens {
+			// 	@media (max-width: 1830px) {
+			// 		right: -90px;
+			// 	}
+			// 	@media (max-width: $md1+px) {
+			// 		right: -50px;
+			// 	}
+			// }
+		}
+		&--list {
+			flex: 0 1 100%;
+			padding: 196px 0 0 165px;
+			@media (max-width: 1830px) {
+				flex: 0 1 auto;
+				padding: 196px 30px 0px 0px;
+			}
+			@media (max-width: $md2+px) {
+				padding: 196px 0px 0px 0px;
+			}
+			@media (max-width: $md3+px) {
+				order: 1;
+				flex: 0 1 100%;
+				display: flex;
+				justify-content: center;
+				padding: 50px 0 20px;
+			}
+		}
+		@media (max-width: $md1+px) {
+			&.floors__item--scheme .floors__img > img {
+				width: 300px;
+			}
+			&.floors__item--3d .floors__img > img {
+				width: 220px;
+			}
+		}
+	}
+	&__lens {
+		display: block;
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__img {
+		display: block;
+		background: url(../img/icons/search-black.svg) no-repeat bottom right;
+		background-size: 28px;
+	}
+
+	&__list {
+		@media (max-width: $md3+px) {
+			margin: 0 0 50px;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			margin: 0 0 11px;
+			position: relative;
+			color: #000000;
+			font-family: "Uni_Sans";
+			font-size: 34px;
+			font-weight: 400;
+			// line-height: 54px;
+			@media (max-width: $md2+px) {
+				font-size: 24px;
+			}
+			@media (max-width: $md4+px) {
+				font-size: 18px;
+			}
+			&::before {
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				margin: 0px 16px 0px 0px;
+				border-radius: 50%;
+				background: #000;
+			}
+		}
+	}
+}
+
+.lg-object.lg-image[src*="img/plan/floors"] {
+	padding: 30px;
+	background: #fff;
+}
