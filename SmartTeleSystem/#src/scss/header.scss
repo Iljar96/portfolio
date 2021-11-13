@@ -1,0 +1,341 @@
+//====================================================================================================
+//====================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-height: 110px;
+	@media (max-width: 1440.98px) {
+		min-height: 105px;
+	}
+	@media (max-width: $md3+px) {
+		min-height: 60px;
+	}
+	&._scroll {
+		.header__wrapper {
+			background-color: rgba(255, 255, 255, 0.85);
+			box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.95);
+				}
+			}
+		}
+		.header__body {
+			min-height: 50px;
+			@media (min-width: $md2+px) {
+				min-height: 70px;
+			}
+		}
+		+ .page {
+			padding-top: 70px;
+		}
+	}
+	// .header__wrapper
+	&__wrapper {
+		position: fixed;
+		width: 100vw;
+		left: 0;
+		top: 0;
+		z-index: 50;
+		transition: box-shadow 0.3s ease 0s, background-color 0.3s ease 0s;
+	}
+	// .header__body
+	&__body {
+		transition: min-height 0.3s ease 0s;
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+		min-height: 110px;
+		position: relative;
+		@media (max-width: 1440.98px) {
+			min-height: 105px;
+		}
+		@media (max-width: $md3+px) {
+			min-height: 60px;
+		}
+	}
+	// .header__main
+	&__main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		@media (max-width: $md2+px) {
+			flex: 1 1 auto;
+		}
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		img {
+			width: 237px;
+			height: 30px;
+			@media (max-width: 1440.98px) {
+				width: auto;
+				height: 25px;
+			}
+		}
+	}
+}
+.menu {
+	flex: 0 1 850px;
+	@media (max-width: 1440.98px) {
+		flex: 0 1 694px;
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $md3+px) {
+			position: fixed;
+			width: 100%;
+			height: 0;
+			overflow: auto;
+			top: 0;
+			left: -100%;
+			background-color: #fff;
+			padding: 145px 15px 30px 15px;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+			._loaded & {
+				left: 0;
+			}
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: 50px;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s ease 0s;
+				background-color: #fff;
+				z-index: 2;
+			}
+			&._active {
+				height: 100%;
+				opacity: 1;
+				visibility: visible;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		@media (min-width: $md3+px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		@media (max-width: $md2+px) {
+			justify-content: space-evenly;
+		}
+	}
+	// .menu__item
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px 3px;
+		padding: 5px 0px;
+		position: relative;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+			margin: 0px 0px 31px 0px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		position: relative;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 25/18 * 100%;
+		text-transform: uppercase;
+		color: #333333;
+		transition: color 0.3s ease 0s;
+		@media (max-width: 1440.98px) {
+			font-size: 16px;
+			line-height: 22/16 * 100%;
+		}
+		@media (max-width: $md2+px) {
+			@include adaptiv-value("font-size", 16, 10.5, 0);
+		}
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+		}
+		@media (min-width: $md3+px) {
+			&::before {
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #4a74b8;
+				position: absolute;
+				top: -15px;
+				left: 50%;
+				transform: translate(-50%, 0px);
+				pointer-events: none;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+				@media (max-width: 1440.98px) {
+					width: 8px;
+					height: 8px;
+				}
+				@media (max-width: $md2+px) {
+					@include adaptiv-value("width", 8, 6, 0);
+					@include adaptiv-value("height", 8, 6, 0);
+					@include adaptiv-value("top", -15, -8, 0);
+				}
+			}
+		}
+		&._active {
+			&::before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #4a74b8;
+			position: absolute;
+			bottom: -5px;
+			left: 0;
+			transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+			opacity: 0;
+			visibility: hidden;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		@media (max-width: $md3+px) {
+			// font-size: 24px;
+			// font-weight: 600;
+		}
+	}
+}
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		margin-right: 7px;
+		position: relative;
+		display: block;
+		flex: 0 0 20px;
+		max-width: 20px;
+		height: 14px;
+		cursor: pointer;
+		z-index: 5;
+		&::after {
+			content: "";
+			display: block;
+			width: 34px;
+			height: 34px;
+			border: 2px solid #4a74b8;
+			border-radius: 4px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #4a74b8;
+			&:first-child {
+				top: 0px;
+			}
+			&:nth-child(2) {
+				top: 4px;
+			}
+			&:nth-child(3) {
+				top: 8px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+//====================================================================================================
+
+//====================================================================================================
+
+/*
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+*/

@@ -1,0 +1,98 @@
+//<BUTTONS (a.btn+tab)>====================================================================================================
+.btn {
+	display: inline-block;
+	padding: 15px 25px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #4a74b8;
+	border: 2px solid #4a74b8;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #4a74b8;
+			background: #ffffff;
+		}
+	}
+	@media (max-width: 1440.98px) {
+		font-size: 16px;
+		@include adaptiv-font(16, 14, 1);
+	}
+	&:active {
+		background: #3c5c90 !important;
+		color: #fff !important;
+	}
+}
+
+.btn-more {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 19/14 * 100%;
+	color: #010a29;
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		width: 16.6px;
+		height: 9.5px;
+		margin: 0px 0px 0px 5px;
+		background: url("../img/icons/arrow-right.svg") 0 1px no-repeat;
+		background-size: 16.6px auto;
+		transition: transform 0.3s ease 0s;
+	}
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: -8px;
+		left: 0;
+		background: #4a74b8;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&:after {
+				transform: translate(8px, 0px);
+			}
+			&:before {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
+//</BUTTONS>====================================================================================================
+
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&:focus {
+		outline: none;
+	}
+}
+.input {
+	width: 100%;
+	display: block;
+	&._focus {
+	}
+	&._error {
+		// box-shadow: 0 0 1px red;
+	}
+}
+textarea.input {
+	resize: none;
+}
+//</INPUT>====================================================================================================
