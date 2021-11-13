@@ -1,0 +1,48 @@
+@font-face {
+	font-family: "icomoon";
+	src: url("../iconfonts/icomoon.eot?nqy3kn");
+	src: url("../iconfonts/icomoon.eot?nqy3kn#iefix") format("embedded-opentype"),
+		url("../iconfonts/icomoon.ttf?nqy3kn") format("truetype"), url("../fonts/icomoon.woff?nqy3kn") format("woff"),
+		url("../iconfonts/icomoon.svg?nqy3kn#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	// /* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fb:before {
+	content: "\e900";
+}
+.icon-vk:before {
+	content: "\e901";
+}
+.icon-ok:before {
+	content: "\e902";
+}
+.icon-play:before {
+	content: "\e903";
+}
+.icon-viber:before {
+	content: "\e904";
+}
+.icon-tg:before {
+	content: "\e905";
+}
+.icon-phone:before {
+	content: "\e906";
+}
